@@ -3,14 +3,31 @@
     - utter_greet
 * restaurant_search
     - utter_ask_location
-* restaurant_search{"location": "delhi"}
-    - slot{"location": "delhi"}
+* restaurant_search{"location": "italy"}
+    - slot{"location": "italy"}
     - utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
+* restaurant_search{"cuisine": "North Indian"}
+    - slot{"cuisine": "North Indian"}
+	- check_location
+	- slot{"check_op": true}
     - action_search_restaurants
-    - slot{"location": "delhi"}
+    - slot{"location": "italy"}
     - utter_goodbye
+    - export
+
+## complete path 2
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "italy"}
+    - slot{"location": "italy"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "North Indian"}
+    - slot{"cuisine": "North Indian"}
+	- check_location
+	- slot{"check_op": false}
+	- utter_dont_operate_in_area
     - export
 
 ## location specified

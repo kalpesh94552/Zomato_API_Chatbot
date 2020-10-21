@@ -7,6 +7,8 @@ from rasa_sdk.events import SlotSet
 import zomatopy
 import json
 
+citiesFilePath = r"E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\cities.txt"
+
 class ActionSearchRestaurants(Action):
 	def name(self):
 		return 'action_search_restaurants'
@@ -32,4 +34,30 @@ class ActionSearchRestaurants(Action):
 		
 		dispatcher.utter_message("-----"+response)
 		return [SlotSet('location',loc)]
+		
+def check_if_string_in_file(string_to_search):
+    """ Check if any line in the file contains given string """
+    # Open the file in read only mode
+    cityNames = open(citiesFilePath, "r")
+	# Read all lines in the file one by one
+    for line in cityNames:
+		# For each line, check if line contains the string
+        if string_to_search in line:
+            return True
+    return False    
+
+class CheckLocation(Action):
+    def name(self):
+        return 'check_location'
+		
+    def run(self, dispatcher, tracker, domain):              
+        loc = tracker.get_slot('location')
+
+        #dispatcher.utter_message("Check Location Message..!!!")
+		
+        check = check_if_string_in_file(loc)
+        if check:
+            return [SlotSet('check_op',True)]
+        else:
+            return [SlotSet('check_op',False)]
 

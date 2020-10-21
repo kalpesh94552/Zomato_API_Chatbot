@@ -1,0 +1,820 @@
+Microsoft Windows [Version 10.0.19041.572]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Users\Shashikant>active rasa=3.7
+'active' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Shashikant>active rasa=3.7
+'active' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Shashikant>activate rasa=3.7
+
+(rasa=3.7) C:\Users\Shashikant>e:
+
+(rasa=3.7) E:\>cd "E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy"
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 15:27:13 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 15:27:14 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 15:27:26 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 15:27:54 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'stop', 'affirm', 'greet', 'goodbye', 'restaurant_search'
+2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)2020-10-21 15:27:54 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'cuisine', 'price', 'people', 'location'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 15:27:54 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 15:28:00 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:00 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:01 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 15:28:02 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:02 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 15:28:03 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:28:03 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:41<00:00,  2.39it/s, t_loss=1.294, i_acc=1.000, e_f1=0.932]
+2020-10-21 15:29:54 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 15:29:55 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:29:55 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 15:29:55 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:29:55 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 15:29:55 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 15:29:55 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:30:01 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmpmh6c6d8e\nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-153013.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 15:33:46 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 15:33:46 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 15:34:21 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 15:34:48 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+2020-10-21 15:38:12 ERROR    rasa.core.processor  - Encountered an exception while running action 'check_location'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 613, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\processor.py", line 681, in _run_action
+    events = await action.run(output_channel, nlg, tracker, self.domain)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 636, in run
+    raise Exception("Failed to execute custom action.") from e
+Exception: Failed to execute custom action.
+We don't operate in this area..!!!
+Your input ->  hi
+Hi, How can I help you!
+Your input ->
+
+Cancelled by user
+
+2020-10-21 15:55:45 INFO     root  - Killing Sanic server now.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 15:56:23 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 15:56:24 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 15:56:32 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 15:56:50 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'affirm', 'greet', 'restaurant_search', 'stop', 'goodbye'
+2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)2020-10-21 15:56:50 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'price', 'cuisine', 'location', 'people'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:56:50 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:34<00:00,  2.89it/s, t_loss=1.298, i_acc=1.000, e_f1=0.977]
+2020-10-21 15:57:56 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 15:57:56 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:57:56 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 15:57:56 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:57:56 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 15:57:56 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 15:57:56 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 15:57:58 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmpruq34rr7\nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-155801.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 15:59:36 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 15:59:36 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 16:00:11 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:00:24 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+2020-10-21 16:01:02 ERROR    rasa.core.actions.action  - Failed to run custom action 'check_location'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+2020-10-21 16:01:02 ERROR    rasa.core.processor  - Encountered an exception while running action 'check_location'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 954, in create_connection
+    raise exceptions[0]
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 941, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\shashikant\anaconda3\lib\asyncio\selector_events.py", line 464, in sock_connect
+    return await fut
+  File "c:\users\shashikant\anaconda3\lib\asyncio\selector_events.py", line 494, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 5055)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 613, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\processor.py", line 681, in _run_action
+    events = await action.run(output_channel, nlg, tracker, self.domain)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 644, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+We don't operate in this area..!!!
+Your input ->  hi
+Hi, How can I help you!
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+We don't operate in this area..!!!
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+We don't operate in this area..!!!
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  delhi
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+We don't operate in this area..!!!
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  lhopoli
+In what location?
+Your input ->  khopoli
+In what location?
+Your input ->  mumbai
+? what kind of cuisine would you like?  2: Italian (Italian)
+We don't operate in this area..!!!
+Your input ->  hi
+Hi, How can I help you!
+Your input ->  seach
+In what location?
+Your input ->  delhi
+? what kind of cuisine would you like?  2: Italian (Italian)
+We don't operate in this area..!!!
+Your input ->
+
+Cancelled by user
+
+2020-10-21 16:21:52 INFO     root  - Killing Sanic server now.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 16:22:08 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 16:22:09 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 16:22:15 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 16:22:32 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'stop', 'goodbye', 'affirm', 'restaurant_search', 'greet'
+2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)2020-10-21 16:22:32 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'location', 'people', 'cuisine', 'price'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:32 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:22:33 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:33<00:00,  2.98it/s, t_loss=1.347, i_acc=1.000, e_f1=0.955]
+2020-10-21 16:23:31 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 16:23:31 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:23:31 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 16:23:31 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:23:31 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 16:23:31 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 16:23:31 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:23:33 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmpnqw445_o\nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-162336.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 16:25:28 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 16:25:28 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 16:25:55 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:26:04 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+2020-10-21 16:28:25 ERROR    rasa.core.processor  - Encountered an exception while running action 'check_location'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 613, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\processor.py", line 681, in _run_action
+    events = await action.run(output_channel, nlg, tracker, self.domain)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 636, in run
+    raise Exception("Failed to execute custom action.") from e
+Exception: Failed to execute custom action.
+We don't operate in this area..!!!
+Your input ->
+
+Cancelled by user
+
+2020-10-21 16:29:18 INFO     root  - Killing Sanic server now.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 16:29:56 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 16:29:57 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 16:30:00 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 16:30:16 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'goodbye', 'restaurant_search', 'greet', 'affirm', 'stop'
+2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)2020-10-21 16:30:16 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'location', 'people', 'cuisine', 'price'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:16 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:30:17 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:17 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:30:17 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:30:17 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:38<00:00,  2.58it/s, t_loss=1.306, i_acc=1.000, e_f1=0.932]
+2020-10-21 16:31:13 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 16:31:14 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:31:14 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 16:31:14 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:31:14 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 16:31:14 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 16:31:14 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:31:15 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmpth0e0i9b\nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-163118.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 16:32:10 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 16:32:10 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 16:32:36 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:32:46 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+We don't operate in this area..!!!
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Delhi
+? what kind of cuisine would you like?  2: Italian (Italian)
+2020-10-21 16:35:54 ERROR    rasa.core.actions.action  - Failed to run custom action 'check_location'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+2020-10-21 16:35:54 ERROR    rasa.core.processor  - Encountered an exception while running action 'check_location'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 954, in create_connection
+    raise exceptions[0]
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 941, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\shashikant\anaconda3\lib\asyncio\selector_events.py", line 464, in sock_connect
+    return await fut
+  File "c:\users\shashikant\anaconda3\lib\asyncio\selector_events.py", line 494, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 5055)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 613, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\aiohttp\connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\processor.py", line 681, in _run_action
+    events = await action.run(output_channel, nlg, tracker, self.domain)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\core\actions\action.py", line 644, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+We don't operate in this area..!!!
+Your input ->
+
+Cancelled by user
+
+2020-10-21 16:37:10 INFO     root  - Killing Sanic server now.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 16:37:49 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 16:37:49 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+Traceback (most recent call last):
+  File "c:\users\shashikant\anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\users\shashikant\anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Shashikant\Anaconda3\Scripts\rasa.exe\__main__.py", line 9, in <module>
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\__main__.py", line 116, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\cli\train.py", line 90, in train
+    nlu_additional_arguments=extract_nlu_additional_arguments(args),
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\train.py", line 55, in train
+    loop,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\common.py", line 308, in run_in_loop
+    result = loop.run_until_complete(f)
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 566, in run_until_complete
+    self.run_forever()
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 534, in run_forever
+    self._run_once()
+  File "c:\users\shashikant\anaconda3\lib\asyncio\base_events.py", line 1771, in _run_once
+    handle._run()
+  File "c:\users\shashikant\anaconda3\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\train.py", line 110, in train_async
+    nlu_additional_arguments=nlu_additional_arguments,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\train.py", line 207, in _train_async_internal
+    old_model_zip_path=old_model,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\train.py", line 246, in _do_training
+    additional_arguments=nlu_additional_arguments,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\train.py", line 547, in _train_nlu_with_validated_data
+    **additional_arguments,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\nlu\train.py", line 97, in train
+    trainer = Trainer(nlu_config, component_builder)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\nlu\model.py", line 157, in __init__
+    components.validate_requirements(cfg.component_names)
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\nlu\components.py", line 49, in validate_requirements
+    from rasa.nlu import registry
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\nlu\registry.py", line 12, in <module>
+    from rasa.nlu.classifiers.diet_classifier import DIETClassifier
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 25, in <module>
+    from rasa.utils.tensorflow.models import RasaModel, TransformerRasaModel
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\tensorflow\models.py", line 26, in <module>
+    from rasa.utils.tensorflow.model_data import RasaModelData, FeatureSignature
+  File "c:\users\shashikant\anaconda3\lib\site-packages\rasa\utils\tensorflow\model_data.py", line 7, in <module>
+    from sklearn.model_selection import train_test_split
+  File "c:\users\shashikant\anaconda3\lib\site-packages\sklearn\__init__.py", line 80, in <module>
+    from .base import clone
+  File "c:\users\shashikant\anaconda3\lib\site-packages\sklearn\base.py", line 21, in <module>
+    from .utils import _IS_32BIT
+  File "c:\users\shashikant\anaconda3\lib\site-packages\sklearn\utils\__init__.py", line 23, in <module>
+    from .class_weight import compute_class_weight, compute_sample_weight
+  File "c:\users\shashikant\anaconda3\lib\site-packages\sklearn\utils\class_weight.py", line 7, in <module>
+    from .validation import _deprecate_positional_args
+  File "c:\users\shashikant\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 21, in <module>
+    import joblib
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\__init__.py", line 120, in <module>
+    from .parallel import Parallel
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\parallel.py", line 26, in <module>
+    from ._parallel_backends import (FallbackToBackend, MultiprocessingBackend,
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 17, in <module>
+    from .pool import MemmappingPool
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\pool.py", line 31, in <module>
+    from ._memmapping_reducer import get_memmapping_reducers
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 37, in <module>
+    from .externals.loky.backend import resource_tracker
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\externals\loky\__init__.py", line 13, in <module>
+    from .reusable_executor import get_reusable_executor
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 11, in <module>
+    from .process_executor import ProcessPoolExecutor, EXTRA_QUEUED_CALLS
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\externals\loky\process_executor.py", line 84, in <module>
+    from .backend.utils import recursive_terminate, get_exitcodes_terminated_worker
+  File "c:\users\shashikant\anaconda3\lib\site-packages\joblib\externals\loky\backend\utils.py", line 10, in <module>
+    import psutil
+  File "c:\users\shashikant\anaconda3\lib\site-packages\psutil\__init__.py", line 41, in <module>
+    from . import _common
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 818, in get_code
+  File "<frozen importlib._bootstrap_external>", line 917, in get_data
+KeyboardInterrupt
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 16:38:10 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 16:38:11 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 16:38:16 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 16:38:39 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'goodbye', 'restaurant_search', 'affirm', 'greet', 'stop'
+2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)2020-10-21 16:38:39 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'price', 'cuisine', 'people', 'location'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:38:39 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:37<00:00,  2.64it/s, t_loss=1.292, i_acc=1.000, e_f1=0.955]
+2020-10-21 16:39:34 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 16:39:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:39:34 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 16:39:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:39:34 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 16:39:34 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 16:39:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 16:39:36 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmpk_mtzf2y\nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-163939.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 16:41:27 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 16:41:27 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 16:42:09 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 16:43:14 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  2: Italian (Italian)
+Check Location Message..!!!
+-----Found Joey's Pizza in Shop 1, Plot D, Samruddhi Complex, Chincholi Bunder Road, Mindspace, Malad West, Mumbai
+Found Joey's Pizza in Shop 6-9, Upvan Building, Near Indian Oil Colony, Azad Nagar, Mumbai
+Found Prithvi Cafe in Prithvi Theatre, Janki Kutir, Juhu Church Road, Juhu, Mumbai
+Found Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai
+Found Jimis Burger in 13-14, Pleasant Park, Off Link Road, Evershine Nagar, Opposite Movie Time Cinema, Malad West, Mumbai
+goodbye :(
+Your input ->  hi
+Hi, How can I help you!
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Yauatcha in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found Hakkasan in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found The Fatty Bao in Ground Floor, Summerville, 33rd Road, Linking Road, Bandra West, Mumbai
+Found Facing East in JVPD Scheme, 13th Road, Near Juhu Gymkhana, Juhu, Mumbai
+Found Yazu - Pan Asian Supper Club in 9, Ground Floor, Raheja Classic Complex, Near Infinity Mall, Phase D, Shastri Nagar, Oshiwara, Andheri West, Mumbai
+Bye-bye
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Khopoli
+In what location?
+Your input ->  Khopoli
+In what location?
+Your input ->  mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Yauatcha in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found Hakkasan in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found The Fatty Bao in Ground Floor, Summerville, 33rd Road, Linking Road, Bandra West, Mumbai
+Found Facing East in JVPD Scheme, 13th Road, Near Juhu Gymkhana, Juhu, Mumbai
+Found Yazu - Pan Asian Supper Club in 9, Ground Floor, Raheja Classic Complex, Near Infinity Mall, Phase D, Shastri Nagar, Oshiwara, Andheri West, Mumbai
+goodbye :(
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Italy
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found The Wall in 995 W Highway 287 Byp, Waxahachie 75165
+Found Wong's Express in 135 N 8th St, Midlothian 76065
+Found Sy's Kitchen in 350 S Covington St, Hillsboro 76645
+Found Wall Chinese Cafe in 1001 E Ennis Ave, Ennis 75119
+Found East Buffet in 1000 E Main St, Midlothian 76065
+goodbye :(
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  delhi
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Boa Village in 13, Alipur Road, Civil Lines, New Delhi
+Found Pa Pa Ya in A-3, Select Citywalk, District Centre, Saket, New Delhi
+Found Plum By Bent Chair in Ground Floor, Worldmark 2, Aerocity, New Delhi
+Found Chew - Pan Asian Cafe in M-16, 1st Floor, Outer Circle, Connaught Place, New Delhi
+Found Kylin Experience in T-302, 3rd Floor, Ambience Mall, Vasant Kunj, New Delhi
+Bye-bye
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Yauatcha in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found Hakkasan in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found The Fatty Bao in Ground Floor, Summerville, 33rd Road, Linking Road, Bandra West, Mumbai
+Found Facing East in JVPD Scheme, 13th Road, Near Juhu Gymkhana, Juhu, Mumbai
+Found Yazu - Pan Asian Supper Club in 9, Ground Floor, Raheja Classic Complex, Near Infinity Mall, Phase D, Shastri Nagar, Oshiwara, Andheri West, Mumbai
+Bye-bye
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  Delhi
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Boa Village in 13, Alipur Road, Civil Lines, New Delhi
+Found Pa Pa Ya in A-3, Select Citywalk, District Centre, Saket, New Delhi
+Found Plum By Bent Chair in Ground Floor, Worldmark 2, Aerocity, New Delhi
+Found Chew - Pan Asian Cafe in M-16, 1st Floor, Outer Circle, Connaught Place, New Delhi
+Found Kylin Experience in T-302, 3rd Floor, Ambience Mall, Vasant Kunj, New Delhi
+goodbye :(
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  4: North Indian (North Indian)
+-----Found Joey's Pizza in Shop 1, Plot D, Samruddhi Complex, Chincholi Bunder Road, Mindspace, Malad West, Mumbai
+Found Joey's Pizza in Shop 6-9, Upvan Building, Near Indian Oil Colony, Azad Nagar, Mumbai
+Found Prithvi Cafe in Prithvi Theatre, Janki Kutir, Juhu Church Road, Juhu, Mumbai
+Found Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai
+Found Jimis Burger in 13-14, Pleasant Park, Off Link Road, Evershine Nagar, Opposite Movie Time Cinema, Malad West, Mumbai
+goodbye :(
+Your input ->  hi
+Hi, How can I help you!
+Your input ->  search
+In what location?
+Your input ->  Italy
+? what kind of cuisine would you like?  3: South Indian (South Indian)
+-----Found Shell Texas Best Smokehouse in 1020 Dale Evans Dr, Italy 76651
+Found Pizza Inn in 100 L R Campbell Rd, Italy 76651
+Found Texas Best Smokehouse in 1022 Dale Evans Dr, Italy 76651
+Found McDonald's in 100 Kinfolk Road 76651
+Found Sonic Drive-In in 1020 Dale Evans Drive 76651
+Bye-bye
+Your input ->  hi
+Hi, How can I help you!
+Your input ->  search
+In what location?
+Your input ->  italy
+? what kind of cuisine would you like?  4: North Indian (North Indian)
+-----Found Shell Texas Best Smokehouse in 1020 Dale Evans Dr, Italy 76651
+Found Pizza Inn in 100 L R Campbell Rd, Italy 76651
+Found Texas Best Smokehouse in 1022 Dale Evans Dr, Italy 76651
+Found McDonald's in 100 Kinfolk Road 76651
+Found Sonic Drive-In in 1020 Dale Evans Drive 76651
+Bye-bye
+Your input ->
+
+Cancelled by user
+
+2020-10-21 17:06:22 INFO     root  - Killing Sanic server now.
+^C
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa train
+2020-10-21 17:06:36 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\domain.yml. Rasa Open Source will read the file as a version '2.0' file. See https://rasa.com/docs/rasa/training-data-format.
+2020-10-21 17:06:37 INFO     rasa.model  - Data (stories) for Core model section changed.
+2020-10-21 17:06:37 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2020-10-21 17:07:12 INFO     rasa.nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2020-10-21 17:08:00 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 63 (5 distinct intents)
+
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'goodbye', 'stop', 'affirm', 'greet', 'restaurant_search'
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 30 (4 distinct entities)
+2020-10-21 17:08:00 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'people', 'price', 'location', 'cuisine'
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Intent 'stop' has only 1 training examples! Minimum is 2, training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'people' has only 1 training examples! The minimum is 2, because of this the training may fail.
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Entity entity 'price' has only 1 training examples! The minimum is 2, because of this the training may fail.
+2020-10-21 17:08:00 INFO     rasa.nlu.model  - Starting to train component SpacyNLP
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Starting to train component SpacyTokenizer
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Starting to train component SpacyFeaturizer
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:05 INFO     rasa.nlu.model  - Starting to train component LexicalSyntacticFeaturizer
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Starting to train component CountVectorsFeaturizer
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:08:06 INFO     rasa.nlu.model  - Starting to train component DIETClassifier
+Epochs: 100%|████████████████████████████████████████| 100/100 [00:41<00:00,  2.42it/s, t_loss=1.324, i_acc=1.000, e_f1=0.955]
+2020-10-21 17:09:34 INFO     rasa.utils.tensorflow.models  - Finished training.
+2020-10-21 17:09:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:09:34 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2020-10-21 17:09:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:09:34 INFO     rasa.nlu.model  - Starting to train component ResponseSelector
+2020-10-21 17:09:34 INFO     rasa.nlu.selectors.response_selector  - Retrieval intent parameter was left to its default value. This response selector will be trained on training examples combining all retrieval intents.
+2020-10-21 17:09:34 INFO     rasa.nlu.model  - Finished training component.
+2020-10-21 17:09:37 INFO     rasa.nlu.model  - Successfully saved model into 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmp8z0ynzn1\nlu'
+NLU model training completed.
+2020-10-21 17:10:02 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+Training Core model...
+Processed story blocks: 100%|█████████████████████████████████████████████████| 11/11 [00:00<00:00, 1222.38it/s, # trackers=1]
+Processed story blocks: 100%|██████████████████████████████████████████████████| 11/11 [00:00<00:00, 148.66it/s, # trackers=9]
+Processed story blocks: 100%|██████████████████████████████████████████████████| 11/11 [00:00<00:00, 21.82it/s, # trackers=50]
+Processed story blocks: 100%|██████████████████████████████████████████████████| 11/11 [00:00<00:00, 19.10it/s, # trackers=50]
+c:\users\shashikant\anaconda3\lib\site-packages\rasa\shared\utils\io.py:89: UserWarning: Found a rule-based policy in your pipeline but no rule-based training data. Please add rule-based stories to your training data or remove the rule-based policy (`RulePolicy`) from your your pipeline.
+  More info at https://rasa.com/docs/rasa/rules
+Processed trackers: 100%|████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 300.01it/s, # actions=36]
+Processed actions: 36it [00:00, 631.62it/s, # examples=32]
+Processed trackers: 100%|████████████████████████████████████████████████████| 509/509 [00:05<00:00, 95.07it/s, # actions=274]
+Epochs: 100%|██████████████████████████████████████████| 200/200 [00:42<00:00,  4.76it/s, t_loss=1.665, loss=1.433, acc=0.949]
+2020-10-21 17:11:10 INFO     rasa.utils.tensorflow.models  - Finished training.
+Processed trackers: 0it [00:00, ?it/s]
+Processed trackers: 100%|████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 321.59it/s, # actions=36]
+Processed trackers: 100%|██████████████████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 900.19it/s]
+2020-10-21 17:11:11 INFO     rasa.core.agent  - Persisted model to 'C:\Users\Public\Documents\Wondershare\CreatorTemp\tmp8z0ynzn1\core'
+Core model training completed.
+Your Rasa model is trained and saved at 'E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\models\20201021-171114.tar.gz'.
+
+(rasa=3.7) E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy>rasa shell
+2020-10-21 17:13:45 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-21 17:13:45 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-21 17:14:20 INFO     rasa.nlu.components  - Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-21 17:14:37 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Italy
+? what kind of cuisine would you like?  4: North Indian (North Indian)
+Check Location Message..!!!
+We don't operate in this area..!!!
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+Check Location Message..!!!
+-----Found Yauatcha in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found Hakkasan in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found The Fatty Bao in Ground Floor, Summerville, 33rd Road, Linking Road, Bandra West, Mumbai
+Found Facing East in JVPD Scheme, 13th Road, Near Juhu Gymkhana, Juhu, Mumbai
+Found Yazu - Pan Asian Supper Club in 9, Ground Floor, Raheja Classic Complex, Near Infinity Mall, Phase D, Shastri Nagar, Oshiwara, Andheri West, Mumbai
+goodbye :(
+Your input ->  hio
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Italy
+? what kind of cuisine would you like?  4: North Indian (North Indian)
+We don't operate in this area..!!!
+Your input ->  hi
+hey there! How may i help you
+Your input ->  search
+In what location?
+Your input ->  mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+We don't operate in this area..!!!
+Your input ->  hi
+Hey, How is it going. How May I help you Today
+Your input ->  search
+In what location?
+Your input ->  Mumbai
+? what kind of cuisine would you like?  1: Chinese (Chinese)
+-----Found Yauatcha in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found Hakkasan in 206, 2nd Floor, Krystal, Waterfield Road, Linking Road, Bandra West, Mumbai
+Found The Fatty Bao in Ground Floor, Summerville, 33rd Road, Linking Road, Bandra West, Mumbai
+Found Facing East in JVPD Scheme, 13th Road, Near Juhu Gymkhana, Juhu, Mumbai
+Found Yazu - Pan Asian Supper Club in 9, Ground Floor, Raheja Classic Complex, Near Infinity Mall, Phase D, Shastri Nagar, Oshiwara, Andheri West, Mumbai
+goodbye :(
+Your input ->
+Your input ->

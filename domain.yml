@@ -4,18 +4,26 @@ intents:
 - greet
 - goodbye
 - stop
+- int_locationDetect
 entities:
 - cuisine
 - location
 - price
 - people
+- detectLocation
+- confirmLocation
 slots:
   cuisine:
     type: text
   location:
     type: text
-  check_op:
+  slt_checkOp:
     type: bool
+  detectLocation:
+    type: text
+  confirmLocation:
+    type: text
+
 responses:
   utter_ask_cuisine:
   - buttons:
@@ -42,7 +50,14 @@ responses:
   - text: Hi, How can I help you!
   - text: Hey, How is it going. How May I help you Today
   utter_dont_operate_in_area:
-  - text: We don't operate in this area..!!!
+  - text: We do not operate in that area yet.
+  utter_confirm_location:
+  - buttons:
+    - payload: loc_Yes
+      title: Confirm
+    - payload: loc_No
+      title: Refute
+    text: Is the location name {detectLocation}?
 actions:
 - action_search_restaurants
 - utter_ask_cuisine
@@ -51,5 +66,7 @@ actions:
 - utter_default
 - utter_goodbye
 - utter_greet
-- check_location
 - utter_dont_operate_in_area
+- utter_confirm_location
+- act_checkLocation
+- act_detectLocation

@@ -41,7 +41,7 @@
 - I want to grab lunch
 - I am searching for a dinner spot
 - I am looking for some restaurants in [Delhi](location).
-- I am looking for some restaurants in [Bangalore](location)
+- I am looking for some restaurants in [Bengaluru](location)
 - show me [chinese](cuisine) restaurants
 - show me [chines](cuisine:chinese) restaurants in the [New Delhi](location:Delhi)
 - show me a [mexican](cuisine) place in the [centre](location)
@@ -50,40 +50,76 @@
 - anywhere in the [west](location)
 - I am looking for [asian fusion](cuisine) food
 - I am looking a restaurant in [294328](location)
-- in [Gurgaon](location)
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
 - [Chinese](cuisine:chinese)
 - [chinese](cuisine)
-- [Lithuania](location)
-- Oh, sorry, in [Italy](location)
-- in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
 - can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
-- Please find me a restaurantin [bangalore](location)
-- [mumbai](location)
-- [Chinese](cuisine:chinese)
+- Please find me a restaurant in [Bengaluru](location)
 - show me restaurants
-- [mumbai](location)
-- [Italian](cuisine)
 - please find me [chinese](cuisine) restaurant in [delhi](location)
 - can you find me a [chinese](cuisine) restaurant
-- [delhi](location)
 - please find me a restaurant in [ahmedabad](location)
-- please show me a few [italian](cuisine) restaurants in [bangalore](location)
+- please show me a few [italian](cuisine) restaurants in [Bengaluru](location)
+- search
 
+## intent: int_locationDetect
+- [khopoli](detectLocation)
+- [sion](detectLocation)
+- [dombivali](detectLocation)
+- [thane](detectLocation)
+- [kalyan](detectLocation)
+- [Lithuania](detectLocation)
+- [delhi](detectLocation)
+- [mumbai](detectLocation)
+- in [Gurgaon](detectLocation)
+- Oh, sorry, in [Italy](detectLocation)
+- in [khopoli](detectLocation)
+- in [sion](detectLocation)
+- in [dombivali](detectLocation)
+- in [thane](detectLocation)
+- [badlapur](detectLocation)
+- [shelu](detectLocation)
+- [neral](detectLocation)
+- [bhivpuri](detectLocation)
+- [karjat](detectLocation)
+- [palasdhari](detectLocation)
+- [panvel](detectLocation)
+- [kharghar](detectLocation)
+- [loc_Yes](confirmLocation)
+- [loc_No](confirmLocation)
 ## synonym:4
 - four
 
 ## synonym:Delhi
 - New Delhi
+- dilli
+- delhi
 
-## synonym:bangalore
-- Bengaluru
+## synonym:Bengaluru
+- bengaluru
+- banglore
+- Banglore
+
+## synonym:Mumbai
+- bombay
+- Bombay
+- mumbai
+
+## synonym:Kolkata
+- calcutta
+- Calcutta 
+- kolkata
+
+## synonym:Pune
+- pune
+- poona
+- Poona 
 
 ## synonym:chinese
 - chines
@@ -102,3 +138,6 @@
 
 ## regex:pincode
 - [0-9]{6}
+
+## regex:detectLocation
+- ^[A-Za-z]+$

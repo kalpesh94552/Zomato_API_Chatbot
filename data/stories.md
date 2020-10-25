@@ -3,15 +3,18 @@
     - utter_greet
 * restaurant_search
     - utter_ask_location
-* restaurant_search{"location": "italy"}
-    - slot{"location": "italy"}
+* int_locationDetect{"detectLocation": "khopoli"}
+    - slot{"detectLocation": "khopoli"}
+    - utter_confirm_location
+* int_locationDetect{"confirmLocation": "loc_Yes"}
+    - slot{"confirmLocation": "loc_Yes"}
+    - act_detectLocation
     - utter_ask_cuisine
-* restaurant_search{"cuisine": "North Indian"}
-    - slot{"cuisine": "North Indian"}
-	- check_location
-	- slot{"check_op": true}
+* restaurant_search{"cuisine": "Chinese"}
+    - slot{"cuisine": "Chinese"}
+	- act_checkLocation
+	- slot{"slt_checkOp": true}
     - action_search_restaurants
-    - slot{"location": "italy"}
     - utter_goodbye
     - export
 
@@ -20,14 +23,33 @@
     - utter_greet
 * restaurant_search
     - utter_ask_location
-* restaurant_search{"location": "italy"}
-    - slot{"location": "italy"}
+* int_locationDetect{"detectLocation": "khopoli"}
+    - slot{"detectLocation": "khopoli"}
+    - utter_confirm_location
+* int_locationDetect{"confirmLocation": "loc_Yes"}
+    - slot{"confirmLocation": "loc_Yes"}
+    - act_detectLocation
     - utter_ask_cuisine
-* restaurant_search{"cuisine": "North Indian"}
-    - slot{"cuisine": "North Indian"}
-	- check_location
-	- slot{"check_op": false}
+* restaurant_search{"cuisine": "Chinese"}
+    - slot{"cuisine": "Chinese"}
+	- act_checkLocation
+	- slot{"slt_checkOp": false}
 	- utter_dont_operate_in_area
+    - export
+
+## complete path 3
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* int_locationDetect{"detectLocation": "khopoli"}
+    - slot{"detectLocation": "khopoli"}
+    - utter_confirm_location
+* int_locationDetect{"confirmLocation": "loc_No"}
+    - slot{"confirmLocation": "loc_No"}
+    - act_detectLocation
+* restaurant_search
+    - utter_ask_location
     - export
 
 ## location specified

@@ -14,7 +14,9 @@ class ActionSearchRestaurants(Action):
 		return 'action_search_restaurants'
 		
 	def run(self, dispatcher, tracker, domain):
-		config={ "user_key":"f4924dc9ad672ee8c4f8c84743301af5"}
+		#dispatcher.utter_message("Inside the restaurant search")
+		
+		config={ "user_key":"e556cab022363342ab67be69f38554f7"}
 		zomato = zomatopy.initialize_app(config)
 		loc = tracker.get_slot('location')
 		cuisine = tracker.get_slot('cuisine')
@@ -41,23 +43,38 @@ def check_if_string_in_file(string_to_search):
     cityNames = open(citiesFilePath, "r")
 	# Read all lines in the file one by one
     for line in cityNames:
+        line = line.lower()
+        string_to_search = string_to_search.lower()
 		# For each line, check if line contains the string
         if string_to_search in line:
             return True
-    return False    
+    return False
 
+# Check if the detected location belong to Tier1 or Tier2 dataset
 class CheckLocation(Action):
     def name(self):
-        return 'check_location'
-		
+        return 'act_checkLocation'
+
     def run(self, dispatcher, tracker, domain):              
         loc = tracker.get_slot('location')
-
         #dispatcher.utter_message("Check Location Message..!!!")
-		
         check = check_if_string_in_file(loc)
         if check:
-            return [SlotSet('check_op',True)]
+            return [SlotSet('slt_checkOp',True)]
         else:
-            return [SlotSet('check_op',False)]
+            return [SlotSet('slt_checkOp',False)]
 
+# Class to detect location after utter_ask_location
+class detectLocation(Action):
+	def name(self):
+		return 'act_detectLocation'
+
+	def run(self, dispatcher, tracker, domain):
+		loc = tracker.get_slot('detectLocation')
+		check_loc = tracker.get_slot('confirmLocation')
+
+		if len(loc) >= 3 and check_loc == "loc_Yes":
+			return [SlotSet('location',loc)]
+		else:
+			return [SlotSet('confirmLocation',check_loc)]
+			#dispatcher.utter_message("Please restart the session, thank you..!!!")

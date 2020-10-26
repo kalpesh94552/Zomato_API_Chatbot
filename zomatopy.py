@@ -7,7 +7,6 @@ base_url = "https://developers.zomato.com/api/v2.1/"
 def initialize_app(config):
     return Zomato(config)
 
-
 class Zomato:
     def __init__(self, config):
         self.user_key = config["user_key"]

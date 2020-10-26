@@ -11,7 +11,6 @@
 - great choice
 - sounds really good
 - thanks
-- thanks
 
 ## intent:goodbye
 - bye
@@ -32,9 +31,7 @@
 - good morning
 - good evening
 - dear sir
-- hi
-- hi
-- hello
+- heyyy
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -43,7 +40,7 @@
 - I am looking for some restaurants in [Delhi](location).
 - I am looking for some restaurants in [Bengaluru](location)
 - show me [chinese](cuisine) restaurants
-- show me [chines](cuisine:chinese) restaurants in the [New Delhi](location:Delhi)
+- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
 - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
@@ -53,11 +50,11 @@
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
-- [Chinese](cuisine:chinese)
+- [Chinese]{"entity": "cuisine", "value": "chinese"}
 - [chinese](cuisine)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
-- can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
+- can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurant in [Bengaluru](location)
@@ -67,8 +64,15 @@
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [Bengaluru](location)
 - search
+- search restaurants
+- restaurants near me
+- fine me restaurants
+- restuarant in [khopoli](detectLocation)
+- search in [kanpur](detectLocation)
+- food in [nagpur](detectLocation)
+- [North Indian](cuisine)
 
-## intent: int_locationDetect
+## intent:int_locationDetect
 - [khopoli](detectLocation)
 - [sion](detectLocation)
 - [dombivali](detectLocation)
@@ -93,33 +97,41 @@
 - [kharghar](detectLocation)
 - [loc_Yes](confirmLocation)
 - [loc_No](confirmLocation)
+- [Mumbai](detectLocation)
+- [khalapur](detectLocation)
+- [kolhapur](detectLocation)
+- search in [kolhapur](detectLocation)
+- [loc_No](confirmLocation)
+- [hinjewadi](detectLocation)
+- [loc_Yes](confirmLocation)
+
 ## synonym:4
 - four
-
-## synonym:Delhi
-- New Delhi
-- dilli
-- delhi
 
 ## synonym:Bengaluru
 - bengaluru
 - banglore
 - Banglore
 
+## synonym:Delhi
+- New Delhi
+- dilli
+- delhi
+
+## synonym:Kolkata
+- calcutta
+- Calcutta
+- kolkata
+
 ## synonym:Mumbai
 - bombay
 - Bombay
 - mumbai
 
-## synonym:Kolkata
-- calcutta
-- Calcutta 
-- kolkata
-
 ## synonym:Pune
 - pune
 - poona
-- Poona 
+- Poona
 
 ## synonym:chinese
 - chines
@@ -133,11 +145,11 @@
 - veggie
 - vegg
 
+## regex:detectLocation
+- ^[A-Za-z]+$
+
 ## regex:greet
 - hey[^\s]*
 
 ## regex:pincode
 - [0-9]{6}
-
-## regex:detectLocation
-- ^[A-Za-z]+$

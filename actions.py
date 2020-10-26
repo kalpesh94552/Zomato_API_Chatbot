@@ -7,6 +7,8 @@ from rasa_sdk.events import SlotSet
 import zomatopy
 import json
 
+from emailClassFile import emailClass
+
 citiesFilePath = r"E:\zOther\Upgrad AI ML\Programs\34. Chatbot Case Study\Rasa_Chatbot_CaseStudy\cities.txt"
 
 class ActionSearchRestaurants(Action):
@@ -33,9 +35,9 @@ class ActionSearchRestaurants(Action):
 		else:
 			for restaurant in d['restaurants']:
 				response=response+ "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
-		
+
 		dispatcher.utter_message("-----"+response)
-		return [SlotSet('location',loc)]
+		return [SlotSet('emailContent',response)]
 		
 def check_if_string_in_file(string_to_search):
     """ Check if any line in the file contains given string """
@@ -78,3 +80,17 @@ class detectLocation(Action):
 		else:
 			return [SlotSet('confirmLocation',check_loc)]
 			#dispatcher.utter_message("Please restart the session, thank you..!!!")
+
+class sendEmail(Action):
+	def name(self):
+		return 'act_sendEmail'
+
+	def run(self, dispatcher, tracker, domain):
+		mail_content = tracker.get_slot('emailContent')
+		receiverAddress = "kalpesh94552@gmail.com"
+
+		em = emailClass()
+		em.sendEmailFun(mail_content,receiverAddress)
+		dispatcher.utter_message("Mail Sent..!!!")
+
+		return [SlotSet('emailContent',mail_content)]
